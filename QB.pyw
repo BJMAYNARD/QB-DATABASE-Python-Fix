@@ -44,13 +44,30 @@ def main():
         logging.info('QB Database Manager Reset')
         logger = logging.getLogger(QBDM)
 
-    # Logging the Results
-if __name__ == '__main__':
 
-    logging.basicConfig(filename="C:/Test_Reset/Reset_Log_File.txt",
-                        level=logging.INFO,
-                        format='%(levelname)s: %(asctime)s %(message)s',
-                        datefmt='%m/%d/%Y %I:%M:%S')
-    reset_QBCFM()
-    reset_QBIDS()
-    reset_QBDM()
+    # Logging the Results
+file_path = r'C:/Test_Reset/Reset_Log_File.txt'
+if os.path.exists(file_path):
+    if __name__ == '__main__':
+
+        logging.basicConfig(filename="C:/Test_Reset/Reset_Log_File.txt",
+                            level=logging.INFO,
+                            format='%(levelname)s: %(asctime)s %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S')
+        reset_QBCFM()
+        reset_QBIDS()
+        reset_QBDM()
+else:
+    # create a file
+    with open(file_path, 'w') as fp:
+        fp.write()
+
+        if __name__ == '__main__':
+
+            logging.basicConfig(filename="C:/Test_Reset/Reset_Log_File.txt",
+                                level=logging.INFO,
+                                format='%(levelname)s: %(asctime)s %(message)s',
+                                datefmt='%m/%d/%Y %I:%M:%S')
+            reset_QBCFM()
+            reset_QBIDS()
+            reset_QBDM()
