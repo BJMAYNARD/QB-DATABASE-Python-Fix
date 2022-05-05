@@ -1,3 +1,4 @@
+import tkinter as tk
 import os
 import sys
 import time
@@ -44,7 +45,6 @@ def main():
         logging.info('QB Database Manager Reset')
         logger = logging.getLogger(QBDM)
 
-
     # Logging the Results
 file_path = r'C:/Test_Reset/Reset_Log_File.txt'
 if os.path.exists(file_path):
@@ -71,3 +71,37 @@ else:
             reset_QBCFM()
             reset_QBIDS()
             reset_QBDM()
+
+
+window = tk.Tk()
+label = tk.Label(text="Shall We Fix QB")
+label.pack()
+
+window.mainloop()
+button = tk.Button(
+    text="Click Here",
+    width=25,
+    height=5,
+    bg="blue",
+    fg="red",
+    activeforeground='yellow',
+    command=main
+
+)
+
+
+def exit(self):
+    self.frame.destroy()
+
+
+exit_btn = Button(
+    self.frame, text='Exit',
+    command=self.exit,
+    width=25,
+    height=5,
+    bg="blue",
+    fg="red",
+    activeforeground='yellow',
+)
+
+root.mainloop()
