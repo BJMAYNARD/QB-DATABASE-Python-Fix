@@ -82,24 +82,28 @@ ws.geometry('300x100')
 frame1 = LabelFrame(
     ws,
     text='QB QUICK FIX',
-    bg='#f0f0f0',
-    font=(20)
+    bg='#BFC9CA',
+    font=(20),
 )
 frame1.pack(expand=True, fill=BOTH)
-# Button to Run Script
+
 Button(
     frame1,
-    text='Click Here to Fix Services',
-    command=main
+    bg='white',
+    text='Click Here To Fix Services',
+    font=(30),
+    # command=main
 ).pack()
 
 
 frame1.pack(expand=True, fill=BOTH)
-# Button to Kill Window
+
 Button(
     frame1,
-    text='Click Here to EXIT',
-    command=exit
+    bg='white',
+    text='Click Here To Exit',
+    font=(30),
+    # command=exit
 ).pack()
 
 ws.mainloop()
