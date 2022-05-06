@@ -1,4 +1,6 @@
+import tkinter
 import tkinter as tk
+from tkinter import *
 import os
 import sys
 import time
@@ -72,36 +74,32 @@ else:
             reset_QBIDS()
             reset_QBDM()
 
+# GUI Creation
+ws = Tk()
+ws.title(string='')
+ws.geometry('300x100')
 
-window = tk.Tk()
-label = tk.Label(text="Shall We Fix QB")
-label.pack()
-
-window.mainloop()
-button = tk.Button(
-    text="Click Here",
-    width=25,
-    height=5,
-    bg="blue",
-    fg="red",
-    activeforeground='yellow',
+frame1 = LabelFrame(
+    ws,
+    text='QB QUICK FIX',
+    bg='#f0f0f0',
+    font=(20)
+)
+frame1.pack(expand=True, fill=BOTH)
+# Button to Run Script
+Button(
+    frame1,
+    text='Click Here to Fix Services',
     command=main
-
-)
-
-
-def exit(self):
-    self.frame.destroy()
+).pack()
 
 
-exit_btn = Button(
-    self.frame, text='Exit',
-    command=self.exit,
-    width=25,
-    height=5,
-    bg="blue",
-    fg="red",
-    activeforeground='yellow',
-)
+frame1.pack(expand=True, fill=BOTH)
+# Button to Kill Window
+Button(
+    frame1,
+    text='Click Here to EXIT',
+    command=exit
+).pack()
 
-root.mainloop()
+ws.mainloop()
