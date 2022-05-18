@@ -5,6 +5,9 @@ import os
 import sys
 import time
 import logging
+import GUI2
+
+# Main Function of The GUI
 
 
 def main():
@@ -74,6 +77,7 @@ else:
             reset_QBIDS()
             reset_QBDM()
 
+
 # GUI Creation
 ws = Tk()
 ws.title(string='')
@@ -92,7 +96,9 @@ Button(
     bg='white',
     text='Click Here To Fix Services',
     font=(30),
-    # command=main
+    command=lambda: [GUI2, main]
+    # calls the main function and has the 2nd GUI come up
+
 ).pack()
 
 
@@ -103,7 +109,7 @@ Button(
     bg='white',
     text='Click Here To Exit',
     font=(30),
-    # command=exit
+    command=exit
 ).pack()
 
 ws.mainloop()
